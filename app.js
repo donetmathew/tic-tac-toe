@@ -24,8 +24,10 @@ function resetGame(){
     cellElements.forEach((cell)=>{
         cell.classList.remove("X");
         cell.classList.remove("zero");
+        cell.removeEventListener("click",handleClick);
     });
     winningText.classList.remove("show");
+    render();
 }
 
 function render(){
